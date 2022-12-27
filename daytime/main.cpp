@@ -32,12 +32,12 @@ int main()
 //Подготовка структуры с адресом сервера
     sockaddr_in * srv_addr = new (sockaddr_in);
     srv_addr->sin_family = AF_INET; // интернет протокол IPv4
-    srv_addr->sin_port = htons(44215); //Порт
-    srv_addr->sin_addr.s_addr = inet_addr("127.0.0.1"); //Адрес сети
+    srv_addr->sin_port = htons(7); //Порт
+    srv_addr->sin_addr.s_addr = inet_addr("172.16.40.1"); //Адрес сети
     
     int rb = bind(s,(const sockaddr*) self_addr,sizeof(sockaddr_in));
     if (rb == -1) { //Проверка
-        cout << "Error: failed connect to server.\n";
+        cout << "Error: failed binding.\n";
         return 1;
     }
 
