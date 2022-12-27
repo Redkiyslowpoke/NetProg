@@ -2,8 +2,8 @@
 
 RELEASE_FLAGS = -O2 -Wall -DNDEBUG
 DEBUG_FLAGS   = -g -O0 -Wall
-RELEASE_EXEC  = DayTime
-DEBUG_EXEC    = DayTime-dbg
+RELEASE_EXEC  = Echo
+DEBUG_EXEC    = Echo-dbg
 SOURCE        = main.cpp
 
 all: debug release
